@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const http = require('http')
+
+const app = require('../app')
+
+const server = http.createServer(app),
+  port = process.env.PORT || 7777
+
+server.listen(port)
+server.on('listening', onListening)
+
+function onListening() {
+  console.log(`Server service listening on http://127.0.0.1:${port}`)
+}
