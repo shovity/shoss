@@ -62,6 +62,7 @@ const media = (urlOrId, callback) => {
     const object = {}
     object.sources = findMediaOfBodyCode($('div.loadplayer').html())
     object.servers = []
+    object.name = $('.main_page_title a').text().replace(/\n/g, '')
     $('ul.listep > .svep').map((i, e) => {
       const server = {}
       server.serverName = $(e).find('span.svname').text()
