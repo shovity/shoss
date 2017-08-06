@@ -60,7 +60,7 @@ const media = (urlOrId, callback) => {
 
   got(url, gotOptions).then(res => cheerio.load(res.body)).then($ => {
     const object = {}
-    object.sources = findMediaOfBodyCode($('div.loadplayer').html())
+    object.source = findMediaOfBodyCode($('div.loadplayer').html())
     object.servers = []
     object.name = $('.main_page_title a').text().replace(/\n/g, '')
     $('ul.listep > .svep').map((i, e) => {
@@ -112,13 +112,9 @@ function findMediaOfBodyCode(body) {
     const $ = cheerio.load(body)
     const url = $('iframe').attr('src')
     return { iframeSource: url }
+  } else {
+    return JSON.parse(result)
   }
-
-  const beginSlice = body.indexOf('[{"file":"http')
-  const endSlice = body.indexOf('}],captions') + 2
-  const result = body.slice(beginSlice, endSlice)
-
-  return JSON.parse(result)
 }
 
 module.exports = { newest, detail, media, search }

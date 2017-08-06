@@ -1,6 +1,7 @@
 const express = require('express')
 
 const animes = require('./animes')
+const movies = require('./movies')
 const storys = require('./storys')
 const animetvn = require('../../engines/animetvn')
 
@@ -18,6 +19,7 @@ v1.get('/movie/search/:key', (req, res, next) => {
 })
 
 v1.use('/animes', animes)
+v1.use('/movies', movies)
 v1.use('/storys', storys)
 
 module.exports = v1
