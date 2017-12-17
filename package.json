@@ -9,12 +9,14 @@
     "test": "mocha"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "body-parser": "^1.17.2",
     "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "express": "^4.15.3",
-    "got": "^7.1.0"
+    "got": "^7.1.0",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "mocha": "^3.4.2"

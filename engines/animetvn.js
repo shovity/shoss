@@ -1,10 +1,12 @@
+// NOT WORKING YET BECAUSE IT USE CLONDFLARE!!!
+
 const got = require('got')
 const cheerio = require('cheerio')
 
-const DOMAIN = 'http://animetvn.com'
-const DETAIL_PAGE = 'http://animetvn.com/thong-tin-phim/f' // + id + '-xx-.html'
-const MEDIA_PAGE = 'http://animetvn.com/xem-phim/f' // + id + '-xx-.html'
-const SEARCH_PAGE = 'http://animetvn.com/tim-kiem/' // + key + '.html'
+const DOMAIN = 'http://animetvn.tv'
+const DETAIL_PAGE = 'http://animetvn.tv/thong-tin-phim/f' // + id + '-xx-.html'
+const MEDIA_PAGE = 'http://animetvn.tv/xem-phim/f' // + id + '-xx-.html'
+const SEARCH_PAGE = 'http://animetvn.tv/tim-kiem/' // + key + '.html'
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2977.0 Safari/537.36'
 
 // Option for got
