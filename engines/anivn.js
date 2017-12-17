@@ -142,8 +142,4 @@ function getMediaSources(id, cb) {
   })
 }
 
-search('one piece', (data) => {
-  console.log(data)
-})
-
 module.exports = { newest, detail, media, search }
