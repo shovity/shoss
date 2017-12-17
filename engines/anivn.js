@@ -74,7 +74,7 @@ const media = (id, callback) => {
     got(url, gotOptions).then(res => cheerio.load(res.body)).then($ => {
       //
       const object = {}
-      object.source = source
+      object.source = { source, iframeSource: source}
       object.servers = []
 
       object.name = $('.section-title').text().match(/Bình Luận Anime (.+)Bạn Đã Xem Chưa \?/)[1]
